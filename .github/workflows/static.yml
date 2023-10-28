@@ -1,0 +1,22 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main # change to your desired branch name
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v2
+      - run: npm install # run install script
+      - run: npm run dev # run build script
+      # npm version:
+      #- run: npm ci
+      #- run: npm run build
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BRANCH: gh-pages
+          FOLDER: dist # your output folder name
