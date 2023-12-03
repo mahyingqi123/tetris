@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@vitest/ui": "^0.34.1",
