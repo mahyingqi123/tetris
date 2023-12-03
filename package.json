@@ -9,7 +9,7 @@
     "test:run": "vitest run",
     "dev": "vite",
     "build": "tsc && vite build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run dev",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
